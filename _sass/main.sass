@@ -39,17 +39,21 @@ body
 b, strong
   font-weight: bold
 
-// сайдбар меню
+// сайдбар меню || хедер
 // иконки
 .hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner::before, .hamburger.is-active .hamburger-inner::after
   background-color: #fff
+.header-icons
+  background-color: #fff
+  display: flex
+  justify-content: space-between
+  align-items: center
+
 .my-menu-button
-  position: fixed
   right: 40px
   top: 20px
   z-index: 101
 .header-logo__link
-  position: fixed
   left: 40px
   top: 20px
   img
@@ -123,7 +127,7 @@ b, strong
 /////////////////////////////
 
 .main-screen
-  height: 100vh
+  height: 400px
   display: flex
   align-items: center
   position: relative
@@ -168,7 +172,7 @@ b, strong
 .mywork
   counter-reset: count
 .mywork-heading
-  padding: 60px 0
+  padding: 60px 10px
 .mywork-box
   padding: 40px 0
   background-color: #fff

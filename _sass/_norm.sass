@@ -84,10 +84,13 @@ section
   position: fixed
   z-index: -1
   .border
-    width: 16.6%
-    height: 100%
-    position: relative
-    display: inline-block
     border-right: 1px solid #f1f1f1
-    +media-breakpoint-down(xs) 
-      width: 25%
+  .border:nth-child(1), .border:nth-child(2)
+    +media-breakpoint-down(md)
+      display: none
+  .border:nth-child(1), .border:nth-child(2), .border:nth-child(3)
+    +media-breakpoint-down(xs)
+      display: none
+.border-row
+  height: 100%
+  flex-wrap: nowrap
