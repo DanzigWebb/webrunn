@@ -9,9 +9,11 @@
   text-decoration: none
   
 .title-1
-  font-size: 100px
+  font-size: 80px
   font-weight: 700
   letter-spacing: .025em
+  +media-breakpoint-down(xs) 
+    font-size: 45px
 .title-2
   font-size: 52px
   font-weight: 700
@@ -24,6 +26,7 @@
   letter-spacing: 0px
 .title-4
   font-size: 22px
+  font-weight: 400
 
 
 .main-btn
@@ -57,12 +60,10 @@
   width: 50px
   height: 50px
 
-.p-preloader
-  font-family: 'Kalam', cursive
-  font-size: 24px
-  font-weight: 800
-  font-style: italic
-  color: $green
+.p-footer
+  font-size: 14px
+  font-weight: 400
+  letter-spacing: 2px
 .t-center
   text-align: center
 // прочее 
@@ -75,3 +76,18 @@
   opacity: 1
 section 
   padding: 40px 0
+
+// сетка
+.border-wrapper
+  width: 100%
+  height: 100%
+  position: fixed
+  z-index: -1
+  .border
+    width: 16.6%
+    height: 100%
+    position: relative
+    display: inline-block
+    border-right: 1px solid #f1f1f1
+    +media-breakpoint-down(xs) 
+      width: 25%
