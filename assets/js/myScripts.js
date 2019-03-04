@@ -1,9 +1,19 @@
-var buttonMenu = document.querySelector('.my-menu-button');
-var sidebar = document.querySelector('.mysidebar');
-  console.log(buttonMenu)
+
+function openSidebar () {
+  var buttonMenu = document.querySelector('.my-menu-button');
+  var sidebar = document.querySelector('.mysidebar');
+    console.log(buttonMenu)
 
 
-buttonMenu.onclick = function(e) {
-  buttonMenu.classList.toggle('is-active');
-  sidebar.classList.toggle('is-active');
+  buttonMenu.onclick = function(e) {
+    function func() {
+      buttonMenu.classList.toggle('is-active');
+    };
+    setTimeout(func, 400)
+
+    sidebar.classList.toggle('is-active');
+  }
 }
+
+openSidebar ()
+
