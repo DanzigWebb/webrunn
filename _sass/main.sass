@@ -180,10 +180,9 @@ b, strong
   z-index: 1
   border-top: 1px solid #f1f1f1
   border-bottom: 1px solid #f1f1f1
-  position: relative
-  background-image: url(img/grocmart.jpg)
   background-size: cover
   background-position: center center
+  position: relative
   &:before
     content: ""
     position: absolute
@@ -191,7 +190,7 @@ b, strong
     top: 0
     width: 100%
     height: 100%
-    background-color: rgba(0,0,0,.8)
+    background-color: rgba(13, 0, 44, 0.75)
     z-index: -1
     transition: $animate
   &:after
@@ -204,6 +203,11 @@ b, strong
     background-color: #fff
     z-index: -1
     transition: $animate
+.mywork-box:nth-child(2)
+  background-image: url(img/grocmart.jpg)
+.mywork-box:nth-child(3)
+  background-image: url(img/tatoo.jpg)
+
 .mywork-box:hover:after
   width: 0
 
@@ -212,6 +216,11 @@ b, strong
     color: #fff
   .mywork-item-tags__tag
     color: #fff
+
+.mywork-item-content
+  min-height: 250px
+  align-items: flex-end
+
 .mywork-item-tags
   margin-top: 20px
   transition-delay: 0.5s
@@ -232,6 +241,8 @@ b, strong
   display: flex
   align-items: center
   justify-content: flex-end
+  +media-breakpoint-down(xs)
+    justify-content: flex-start
 
 // всегда в конце
 @import "media"
