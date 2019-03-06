@@ -298,6 +298,53 @@ b, strong
     justify-content: flex-start
     align-items: flex-start
 
+
+/////////////////////////////
+// карусель навыков
+/////////////////////////////
+.services
+  .owl-dots
+    margin-top: 20px
+  .owl-dot
+    span 
+      height: 15px
+      width: 15px
+      background-color: #dedede
+      display: block
+      margin-right: 10px
+      border-radius: 50%
+  .active
+    span
+      background-color: $accent
+  .owl-nav
+    position: absolute
+    top: -120px
+    left: 400px
+    +media-breakpoint-down(xs)
+      left: 20px
+      top: -60px
+    .fa-arrow-right:before
+      font-size: 34px
+      margin-left: 25px
+    .fa-arrow-left:before
+      font-size: 34px
+      margin-right: 25px
+
+.services__title
+  margin-bottom: 80px
+.services-item__title
+  font-size: 18px
+  font-weight: 600
+.services-item__svg
+  height: 100px
+  width: 100px
+  fill: #5e5e5e
+  transition: $animate
+.services-item:hover
+  .services-item__svg
+    fill: $accent
+  
+
 // контакт
 .main-contact
   background-color: $black

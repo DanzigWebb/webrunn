@@ -1,4 +1,4 @@
-
+// сайдбар
 function openSidebar () {
   var buttonMenu = document.querySelector('.my-menu-button');
   var sidebar = document.querySelector('.mysidebar');
