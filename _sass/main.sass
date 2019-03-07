@@ -15,6 +15,7 @@ body
   font-size: 16px
   min-width: 320px
   position: relative
+  font-family: 'Montserrat', sans-serif
   line-height: 1.65
   overflow-x: hidden
   color: $text
@@ -44,11 +45,11 @@ b, strong
 .hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner::before, .hamburger.is-active .hamburger-inner::after
   background-color: #fff
 .header-icons
-  background-color: #fff
   display: flex
   justify-content: space-between
   align-items: center
   padding: 0 10px
+  width: 100%
 
 .my-menu-button
   right: 40px
@@ -329,22 +330,81 @@ b, strong
     .fa-arrow-left:before
       font-size: 34px
       margin-right: 25px
-
 .services__title
   margin-bottom: 80px
 .services-item__title
-  font-size: 18px
+  font-size: 22px
   font-weight: 600
+  font-family: 'Oswald', sans-serif
 .services-item__svg
   height: 100px
   width: 100px
+  margin-bottom: 20px
   fill: #5e5e5e
   transition: $animate
 .services-item:hover
   .services-item__svg
     fill: $accent
   
+// обо мне
+.whatcan-wrap
+  justify-content: center
+  align-items: center
+  position: relative
+.whatcan-content__title
+  margin-bottom: $gutter
+.whatcan-img
+  overflow: hidden
+  +media-breakpoint-down(sm)
+    margin-bottom: 20px
+  img
+    +media-breakpoint-down(sm)
+      width: 100%
+  &:after
+    content: ''
+    height: 100%
+    width: 140%
+    background-color: #dedede
+.whatcan-lightbox
+  position: absolute
+  height: 100%
+  width: 75%
+  left: 15px
+  display: block
+  background: rgba(222,222,222,0.6)
+  z-index: -1
+  +media-breakpoint-down(sm)
+    display: none
 
+.whatcan-content__txt
+  position: relative
+  padding-left: 70px
+  +media-breakpoint-down(xs)
+    padding-left: 40px
+  &:before
+    content: ""
+    width: 60px
+    height: 7px
+    background-color: #dedede
+    display: block
+    position: absolute
+    top: 10px
+    left: 0
+    +media-breakpoint-down(xs)
+      width: 30px
+
+// инструменты
+.instruments
+  .fab
+    font-size: 90px
+    color: #5e5e5e
+    text-align: center
+    transition: $animate
+    &:hover
+      color: $accent
+.instruments-item
+  display: flex
+  justify-content: center
 // контакт
 .main-contact
   background-color: $black
@@ -354,7 +414,6 @@ b, strong
 .main-contact__txt
   font-weight: 300
   letter-spacing: 2px
-
 
 
 // всегда в конце
